@@ -12,21 +12,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="sticky navbar--container">
-  <div class="navbar--icon"><i class="fas fa-bars"></i></div>
-  <div class="navbar--title"><h4>Services</h4></div>
-</div>
 
-<div class="sticky nav--open close">
-  <div class="nav--open-icon"><i class="fas fa-times"></i></div>
-  <div class="nav--open-title">Services</div>
-  <div class="nav--open-menu">
-    <a href="mailto:joshuaskyemusic@gmail.com?subject=Joshua%20Skye%20Features">Features</a>
-    <a href="mailto:joshuaskyemusic@gmail.com?subject=Joshua%20Skye%20Production">Production</a>
-    <a href="mailto:joshuaskyemusic@gmail.com?subject=Joshua%20Skye%20Songwriting">Songwriting</a>
-    <a href="mailto:joshuaskyemusic@gmail.com?subject=Joshua%20Skye%20Live%20Performance">Live Performance</a>
-  </div>
-</div>
     <div class="container">
         <!-- Profile Section -->
         <img src="profilepic.JPG" alt="Joshua Skye Profile" class="profile-img">
@@ -38,15 +24,13 @@
             <span class="typewriter"></span>
             by Joshua Skye
         </div>
-
-      
         
         <!-- Social Icons -->
         <div class="social-row">
             <a href="https://open.spotify.com/artist/4557eBTMMQMejAqcVBDjVX" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
             <a href="https://instagram.com/imjoshuaskye" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://soundcloud.com/joshua-skye-904238430" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud"></i></a>
-            <a href="mailto:skymedian7@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:joshuaskyemusic@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             <a href="https://substack.com/@joshuagenius" target="_blank" title="Substack"><i class="fas fa-bookmark"></i></a>
         </div>
 
@@ -84,34 +68,5 @@
         </footer>
     </div>
 
-    <!-- Toggle Script for Services Navigation -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const menu = document.querySelector('.nav--open');
-            const tab = document.querySelector('.navbar--container');
-            const closeBtn = document.querySelector('.nav--open-icon');
-
-            // Apply high z-index to ensure menu stays clickable above other layout layers
-            if (menu) {
-                menu.style.zIndex = '999999';
-            }
-
-            if (tab && menu) {
-                tab.onclick = function(e) {
-                    console.log('Tab clicked');
-                    menu.classList.toggle('close');
-                    menu.classList.toggle('open');
-                };
-            }
-
-            if (closeBtn && menu) {
-                closeBtn.onclick = function(e) {
-                    console.log('Close clicked');
-                    menu.classList.toggle('close');
-                    menu.classList.toggle('open');
-                };
-            }
-        });
-    </script>
 </body>
 </html>
