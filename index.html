@@ -4,180 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joshua Skye Music | Official Website</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="favguitar.png">
     
     <!-- Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700&display=swap">
-
-    <style>
-        :root {
-            --bg-gradient: linear-gradient(180deg, #12002b 0%, #000000 100%);
-            --accent-pink: #e058d6;
-            --font-main: 'Oxanium', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            cursor: url('favguitar.png'), auto;
-        }
-
-        body {
-            background: var(--bg-gradient);
-            background-attachment: fixed;
-            color: #ffffff;
-            font-family: var(--font-main);
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
-            padding: 60px 20px;
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 420px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            position: relative;
-            z-index: 10;
-        }
-
-        /* Profile Image */
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-
-        /* Neon Username Style */
-        .username {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-            color: #fff;
-            text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
-            animation: glow 1.5s infinite alternate;
-        }
-
-        @keyframes glow {
-            0% { text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e; }
-            100% { text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff; }
-        }
-
-        .bio {
-            font-size: 14px;
-            opacity: 0.8;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        /* Social Icons Row */
-        .social-row {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-bottom: 35px;
-            font-size: 1.6rem;
-        }
-
-        .social-row a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .social-row a:hover {
-            color: var(--accent-pink);
-        }
-
-        /* Links Stack & Labels */
-        .links-stack {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .button-label {
-            font-family: var(--font-main);
-            font-size: 16px;
-            font-weight: 700;
-            color: rgba(255, 255, 255, 0.7);
-            text-align: center;
-            margin-top: 15px;
-            margin-bottom: -5px;
-        }
-
-        .link-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(224, 88, 214, 0.3);
-            border-radius: 16px;
-            padding: 16px;
-            padding-right: 20px;
-            color: white;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-
-        .link-card:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: var(--accent-pink);
-            transform: translateY(-2px);
-        }
-
-        .preview-thumb {
-            width: 45px;
-            height: 45px;
-            border-radius: 8px;
-            margin-right: 15px;
-            object-fit: cover;
-        }
-
-        .dots-icon {
-            margin-left: auto;
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 14px;
-        }
-
-        .sc-wrapper {
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(224, 88, 214, 0.3);
-            height: 80px;
-            background: #443444;
-        }
-
-        .footer {
-            margin-top: 80px;
-            font-size: 11px;
-            opacity: 0.5;
-            text-align: center;
-            line-height: 1.8;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
+        <!-- Profile Section -->
         <img src="profilepic.JPG" alt="Joshua Skye Profile" class="profile-img">
-
         <h1 class="username">@imjoshuaskye</h1>
         <p class="bio">The landing page for all my creative endeavors</p>
         
+        <!-- Typewriter Tagline -->
+        <div class="joshua-tagline">
+            <span class="typewriter"></span>
+            by Joshua Skye
+        </div>
+        
+        <!-- Social Icons -->
         <div class="social-row">
             <a href="https://open.spotify.com/artist/4557eBTMMQMejAqcVBDjVX" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
             <a href="https://instagram.com/imjoshuaskye" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
@@ -186,16 +34,13 @@
             <a href="https://substack.com/@joshuagenius" target="_blank" title="Substack"><i class="fas fa-bookmark"></i></a>
         </div>
 
+        <!-- Links Stack -->
         <div class="links-stack">
-            <!-- 1. New Music (Spotify) -->
             <div class="button-label">New Music</div>
             <a href="https://too.fm/4yjdxkd" target="_blank">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5gtofhEObd6pifsOZa6VgZ?utm_source=generator&si=120c4801b88a4a5a" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5gtofhEObd6pifsOZa6VgZ?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </a>
 
-            <!-- 2. Unreleased Music (SoundCloud Player) -->
-  
-            <!-- 3. Presave EP 'understudy' -->
             <div class="button-label">Unreleased Music</div>
             <a href="https://too.fm/4yjdxkd" class="link-card" target="_blank">
                 <img src="coverart.JPEG" alt="understudy cover" class="preview-thumb">
@@ -203,29 +48,23 @@
                 <i class="fas fa-ellipsis-v dots-icon"></i>
             </a>
 
-            <!-- 4. Follow on SoundCloud -->
             <div class="button-label">Soundcloud</div>
             <a href="https://soundcloud.com/joshua-skye-904238430" class="link-card" target="_blank">
-                <div style="width:45px; text-align:center; margin-right:15px; color:var(--accent-pink); font-size: 1.4rem;">
-                    <i class="fab fa-soundcloud"></i>
-                </div>
+                <div class="icon-box"><i class="fab fa-soundcloud"></i></div>
                 <span style="font-weight: 500;">Follow me on Soundcloud</span>
                 <i class="fas fa-ellipsis-v dots-icon"></i>
             </a>
 
-            <!-- 5. Poetry Book -->
             <div class="button-label">Check out my First Poetry Book!</div>
-            <a href="https://r.amzlink.to/?btn_url=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0H12DNZ3P" class="link-card" target="_blank">
-                <div style="width:45px; text-align:center; margin-right:15px; color:var(--accent-pink); font-size: 1.4rem;">
-                    <i class="fas fa-book-open"></i>
-                </div>
+            <a href="https://www.amazon.com/dp/B0H12DNZ3P" class="link-card" target="_blank">
+                <div class="icon-box"><i class="fas fa-book-open"></i></div>
                 <span style="font-weight: 500;">Order My Poetry Book on Amazon</span>
                 <i class="fas fa-ellipsis-v dots-icon"></i>
             </a>
         </div>
 
         <footer class="footer">
-            <p>© 2026 JOSHUA SKYE LIFE OF THE PARTY, VIRGINIA | ALL RIGHTS RESERVED</p>
+            <p>© 2026 JOSHUA SKYE | ALL RIGHTS RESERVED</p>
         </footer>
     </div>
 
