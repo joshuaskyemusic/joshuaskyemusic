@@ -22,7 +22,6 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            /* Keeps the guitar cursor for consistency */
             cursor: url('favguitar.png'), auto;
         }
 
@@ -188,29 +187,39 @@
         </div>
 
         <div class="links-stack">
+            <!-- 1. New Music (Spotify) -->
             <div class="button-label">New Music</div>
+            <a href="https://too.fm/4yjdxkd" target="_blank">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5gtofhEObd6pifsOZa6VgZ?utm_source=generator&si=120c4801b88a4a5a" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </a>
+
+            <!-- 2. Unreleased Music (SoundCloud Player) -->
+  
+            <!-- 3. Presave EP 'understudy' -->
+            <div class="button-label">Unreleased Music</div>
             <a href="https://too.fm/4yjdxkd" class="link-card" target="_blank">
                 <img src="coverart.JPEG" alt="understudy cover" class="preview-thumb">
                 <span style="font-weight: 500;">Presave debut EP ‘understudy’</span>
                 <i class="fas fa-ellipsis-v dots-icon"></i>
             </a>
 
+            <!-- 4. Follow on SoundCloud -->
             <div class="button-label">Soundcloud</div>
-            <div class="sc-wrapper">
-                <iframe width="100%" height="80" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2365024070&color=%23e058d6&auto_play=false&hide_related=true&show_user=true&visual=false"></iframe>
-            </div>
-
-            <div class="button-label">Check out my First Poetry Book!</div>
-            <a href="https://r.amzlink.to/?btn_url=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0H12DNZ3P" class="link-card" target="_blank">
-                <div style="width:45px; text-align:center; margin-right:15px; color:var(--accent-pink); font-size: 1.4rem;"><i class="fas fa-book-open"></i></div>
-                <span style="font-weight: 500;">Order Poetry Book on Amazon</span>
+            <a href="https://soundcloud.com/joshua-skye-904238430" class="link-card" target="_blank">
+                <div style="width:45px; text-align:center; margin-right:15px; color:var(--accent-pink); font-size: 1.4rem;">
+                    <i class="fab fa-soundcloud"></i>
+                </div>
+                <span style="font-weight: 500;">Follow me on Soundcloud</span>
                 <i class="fas fa-ellipsis-v dots-icon"></i>
             </a>
 
-            <div class="button-label">Join my Journey</div>
-            <a href="https://www.instagram.com/imjoshuaskye" class="link-card" target="_blank">
-                <div style="width:45px; text-align:center; margin-right:15px; color:var(--accent-pink); font-size: 1.4rem;"><i class="fab fa-instagram"></i></div>
-                <span style="font-weight: 500;">Follow me on Instagram</span>
+            <!-- 5. Poetry Book -->
+            <div class="button-label">Check out my First Poetry Book!</div>
+            <a href="https://r.amzlink.to/?btn_url=https%3A%2F%2Fwww.amazon.com%2Fdp%2FB0H12DNZ3P" class="link-card" target="_blank">
+                <div style="width:45px; text-align:center; margin-right:15px; color:var(--accent-pink); font-size: 1.4rem;">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <span style="font-weight: 500;">Order My Poetry Book on Amazon</span>
                 <i class="fas fa-ellipsis-v dots-icon"></i>
             </a>
         </div>
