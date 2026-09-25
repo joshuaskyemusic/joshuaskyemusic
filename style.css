@@ -1,72 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Skye Music | Official Website</title>
-    <link rel="icon" type="image/png" href="favguitar.png">
-    
-    <!-- Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700&display=swap">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+:root {
+    --bg-gradient: linear-gradient(180deg, #12002b 0%, #000000 100%);
+    --accent-pink: #e058d6;
+    --accent-purple: #a855f7;
+    --font-main: 'Oxanium', sans-serif;
+}
 
-    <div class="container">
-        <!-- Profile Section -->
-        <img src="profilepic.JPG" alt="Joshua Skye Profile" class="profile-img">
-        <h1 class="username">@imjoshuaskye</h1>
-        <p class="bio">The landing page for all my creative endeavors</p>
-        
-        <!-- Typewriter Tagline -->
-        <div class="joshua-tagline">
-            <span class="typewriter"></span>
-            by Joshua Skye
-        </div>
-        
-        <!-- Social Icons -->
-        <div class="social-row">
-            <a href="https://open.spotify.com/artist/4557eBTMMQMejAqcVBDjVX" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
-            <a href="https://instagram.com/imjoshuaskye" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://soundcloud.com/joshua-skye-904238430" target="_blank" title="SoundCloud"><i class="fab fa-soundcloud"></i></a>
-            <a href="mailto:skymedian7@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://substack.com/@joshuagenius" target="_blank" title="Substack"><i class="fas fa-bookmark"></i></a>
-        </div>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        <!-- Links Stack -->
-        <div class="links-stack">
-            <div class="button-label">New Music</div>
-            <a href="https://too.fm/4yjdxkd" target="_blank">
-                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5gtofhEObd6pifsOZa6VgZ?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-            </a>
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: var(--font-main);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 60px 20px;
+}
 
-            <div class="button-label">Unreleased Music</div>
-            <a href="https://too.fm/4yjdxkd" class="link-card" target="_blank">
-                <img src="coverart.JPEG" alt="understudy cover" class="preview-thumb">
-                <span style="font-weight: 500;">Presave my debut EP ‘understudy’</span>
-                <i class="fas fa-ellipsis-v dots-icon"></i>
-            </a>
+.container {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-            <div class="button-label">Soundcloud</div>
-            <a href="https://soundcloud.com/joshua-skye-904238430" class="link-card" target="_blank">
-                <div class="icon-box"><i class="fab fa-soundcloud"></i></div>
-                <span style="font-weight: 500;">Follow me on Soundcloud</span>
-                <i class="fas fa-ellipsis-v dots-icon"></i>
-            </a>
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
 
-            <div class="button-label">Check out my First Poetry Book!</div>
-            <a href="https://www.amazon.com/dp/B0H12DNZ3P" class="link-card" target="_blank">
-                <div class="icon-box"><i class="fas fa-book-open"></i></div>
-                <span style="font-weight: 500;">Order My Poetry Book on Amazon</span>
-                <i class="fas fa-ellipsis-v dots-icon"></i>
-            </a>
-        </div>
+.username {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
 
-        <footer class="footer">
-            <p>© 2026 JOSHUA SKYE | ALL RIGHTS RESERVED</p>
-        </footer>
-    </div>
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ff005e, 0 0 20px #ff005e; }
+    100% { text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff; }
+}
 
-</body>
-</html>
+.bio {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+/* Typewriter Animation Styles */
+.joshua-tagline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 35px;
+}
+
+.typewriter {
+    --caret: var(--accent-purple);
+    min-width: 8ch;
+    display: inline-block;
+}
+
+.typewriter::before {
+    content: "";
+    animation: typing-joshua 12s infinite;
+}
+
+.typewriter::after {
+    content: "";
+    border-right: 0.6em solid var(--caret);
+    animation: blink 0.7s linear infinite;
+    margin-left: 2px;
+}
+
+@keyframes typing-joshua {
+    0%, 20% { content: ""; }
+    1% { content: "P"; } 2% { content: "Pr"; } 3% { content: "Pro"; }
+    4% { content: "Prog"; } 5% { content: "Progr"; } 6% { content: "Progra"; }
+    7% { content: "Program"; } 8% { content: "Programm"; } 9% { content: "Programme"; }
+    10%, 18% { content: "Programmed"; }
+    25% { content: ""; }
+    26% { content: "P"; } 27% { content: "Pr"; } 28% { content: "Pro"; }
+    29% { content: "Prod"; } 30% { content: "Produ"; } 31% { content: "Produc"; }
+    32% { content: "Produce"; } 33%, 43% { content: "Produced"; }
+    50% { content: ""; }
+    51% { content: "W"; } 52% { content: "Wr"; } 53% { content: "Wri"; }
+    54% { content: "Writ"; } 55% { content: "Writt"; } 56% { content: "Writte"; }
+    57%, 68% { content: "Written"; }
+    75% { content: ""; }
+    76% { content: "R"; } 77% { content: "Re"; } 78% { content: "Rec"; }
+    79% { content: "Reco"; } 80% { content: "Recor"; } 81% { content: "Record"; }
+    82% { content: "Recorde"; } 83%, 93% { content: "Recorded"; }
+    100% { content: ""; }
+}
+
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+/* Social & Link Cards */
+.social-row { display: flex; gap: 25px; margin-bottom: 35px; font-size: 1.6rem; }
+.social-row a { color: white; text-decoration: none; }
+.social-row a:hover { color: var(--accent-pink); }
+
+.links-stack { width: 100%; display: flex; flex-direction: column; gap: 16px; }
+.button-label { font-size: 16px; font-weight: 700; opacity: 0.7; margin-top: 15px; text-align: center;}
+
+.link-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(224, 88, 214, 0.3);
+    border-radius: 16px;
+    padding: 16px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover { border-color: var(--accent-pink); transform: translateY(-2px); background: rgba(255, 255, 255, 0.1); }
+.icon-box { width: 45px; text-align: center; margin-right: 15px; color: var(--accent-pink); font-size: 1.4rem; }
+.preview-thumb { width: 45px; height: 45px; border-radius: 8px; margin-right: 15px; object-fit: cover; }
+.dots-icon { margin-left: auto; opacity: 0.3; }
+.footer { margin-top: 80px; font-size: 11px; opacity: 0.5; text-align: center; letter-spacing: 2px; }
