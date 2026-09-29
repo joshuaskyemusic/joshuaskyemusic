@@ -12,7 +12,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Services Sidebar Trigger & Menu -->
+<div class="side-tab-trigger">
+  <div class="side-tab-icon"><i class="fas fa-bars"></i></div>
+  <div class="side-tab-text">SERVICES</div>
+</div>
 
+<div class="nav--open close">
+  <div class="nav--open-icon"><i class="fas fa-times"></i></div>
+  <div class="nav--open-title">Services</div>
+  <div class="nav--open-menu">
+    <a href="mailto:joshuaskyemusic@gmail.com?subject=Joshua Skye Features">Features</a>
+    <a href="mailto:joshuaskyemusic@gmail.com?subject=Joshua Skye Production">Production</a>
+    <a href="mailto:joshuaskyemusic@gmail.com?subject=Joshua Skye Songwriting">Songwriting</a>
+    <a href="mailto:joshuaskyemusic@gmail.com?subject=Joshua Skye Live Performance">Live Performance</a>
+  </div>
+</div>
     <div class="container">
         <!-- Profile Section -->
         <img src="profilepic.JPG" alt="Joshua Skye Profile" class="profile-img">
@@ -91,6 +106,33 @@
             <p>© 2026 JOSHUA SKYE | ALL RIGHTS RESERVED</p>
         </footer>
     </div>
+
+    <script>
+  (function() {
+    const trigger = document.querySelector('.side-tab-trigger');
+    const menu = document.querySelector('.nav--open');
+    const closeBtn = document.querySelector('.nav--open-icon');
+
+    if (trigger && menu && closeBtn) {
+      // Open menu
+      trigger.addEventListener('click', () => {
+        menu.classList.remove('close');
+      });
+
+      // Close menu with X button
+      closeBtn.addEventListener('click', () => {
+        menu.classList.add('close');
+      });
+      
+      // Close menu if user clicks outside of it
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !trigger.contains(e.target)) {
+          menu.classList.add('close');
+        }
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>
